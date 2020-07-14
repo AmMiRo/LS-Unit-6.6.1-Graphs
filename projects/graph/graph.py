@@ -132,7 +132,9 @@ class Graph:
         for neighbor in neighbors:
             if neighbor not in visited_verts:
                 visited_verts.add(neighbor)
-                return [starting_vertex] + self.dfs_recursive(neighbor, destination_vertex, visited_verts)
+                lst = self.dfs_recursive(neighbor, destination_vertex, visited_verts)
+                if lst is not None:
+                    return [starting_vertex] + lst
         
 
 if __name__ == '__main__':
