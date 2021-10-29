@@ -219,7 +219,7 @@ for initial_direction in starting_exits:
 print(len(traversal_path))
 
 not_visited = []
-for i in range(1, 501):
+for i in range(500):
     if i not in visited_set:
         not_visited.append(i)
 print(not_visited)
